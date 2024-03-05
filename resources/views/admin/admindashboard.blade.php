@@ -31,13 +31,13 @@
            </a>
         </div>
         <div class="col-md-3 mb-3">
-          <a href="">
+          <a href="{{route('examPageLoad')}}">
             <div class="card">
                 <div class="card-header text-center">
                     <img src="https://img.freepik.com/premium-vector/web-development-programming-languages-css-html-it-ui-programmer-cartoon-character-developing-website-coding-flat-illustration-banner_128772-862.jpg" alt="" class="img-fluid"  width="200px">
                 </div>
                 <div class="card-body">
-                    <h4 class="text-center">Conduct Exam</h4>
+                    <h4 class="text-center">Add Exam</h4>
                 </div>
             </div>
           </a>

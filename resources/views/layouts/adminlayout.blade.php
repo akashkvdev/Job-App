@@ -11,13 +11,15 @@
       a{
         text-decoration: none;
       }
+
+      
     </style>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Thirteenth navbar example">
         <div class="container-fluid">
-            <a class="navbar-brand col-lg-3 me-0" href="#">JOB-APP</a>
+            <a class="navbar-brand col-lg-3 me-0" href="{{route('adminDashboard')}}">JOB-APP</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -26,16 +28,16 @@
     
                 <ul class="navbar-nav col-lg-6 justify-content-lg-center">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{{route('skillPageLoad')}}">Add Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link active" ></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        <a class="nav-link active" aria-disabled="true" href="{{route('QApageLoad')}}"> Add Q/A</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        <a class="nav-link active " aria-disabled="true"  href="{{route('examPageLoad')}}"> Add Exam</a>
                     </li>
                   
                 </ul>

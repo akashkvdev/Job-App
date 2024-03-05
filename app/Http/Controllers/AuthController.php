@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Exam;
 use App\Models\Skill;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -104,8 +105,9 @@ public function userLogin(Request $request){
 
 // user Dashboard
     public function loadDahsboard(){
-        $skills = Skill::all();
-        return view('users.userdashbaord',compact('skills'));
+        $exams = Exam::all();
+        
+        return view('users.userdashbaord',compact('exams'));
     }
 
 }

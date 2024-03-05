@@ -11,5 +11,5 @@ class Exam extends Model
 
     protected $primaryKey = 'exam_id';
 
-    protected $fillable = ['exam_name','exam_date','total_marks'];
+    protected $fillable = ['exam_name','exam_date','total_marks','examImage'];
 }

@@ -68,12 +68,12 @@
              </div>
              <div class="modal-body">
                 <select name="exam_id" id="exam_id" class="form-select mb-3 fw-bolder">
-                    <option selected  disabled>Select Exam</option>
-                    <option value="1">Angular Exam</option>
-                    <option value="2">Python Exam</option>
-                    <option value="3">Javascript Exam</option>
-                    <option value="4">SQl Exam</option>
+                    <option selected disabled>Select Exam</option>
+                    @foreach($exams as $exam)
+                        <option value="{{ $exam->exam_id }}">{{ $exam->exam_name }}</option>
+                    @endforeach
                 </select>
+                
                 <input type="text" name="question_text" id="question_text" class="form-control fw-bolder" placeholder="Write Here Question...">
                 <div class="mt-2 text-end">
                     <button class="btn btn-warning text-dark fw-bolder" id="addOptionsbtn">ADD Options</button>
@@ -155,6 +155,7 @@
 
     var correctOption = $('#correct_option').val();
     var examId = $('#exam_id').val();
+    // alert(examId)
 
     // Validate the minimum number of options
     if (options.length >= minOptions) {
@@ -172,11 +173,13 @@
             contentType: 'application/json', // Set the content type
             success: function (response) {
                 // Handle success response from the server
+                alert(response.msg)
                 console.log('Success:', response);
             },
             error: function (error) {
                 // Handle error response from the server
-                console.log('Error:', error);
+                // console.log('Error:', error);
+                alert(response.msg)
             }
         });
     } else {
